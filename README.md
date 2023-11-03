@@ -44,6 +44,12 @@ The script *heart_attack_patient_alpha.py* send the data of one patient and can 
 
 #### Video of the web service running :
 I loaded a small video where you can see the web service running : *web_service_running.webm* 
-The video show the web service starting in Docker and evaluating the data of different patient, sent through the network by the script *heart_attack_patient_alpha.py* living outside the Docker container and manually modified to change the data and see the answer. I suggest to view it using VLC player.
+
+The video show the web service starting in Docker, and how it is evaluating data coming from different patients.
+
+The data are sent through the network by the script *heart_attack_patient_alpha.py* , that it is living outside of the Docker container.
+That script it is manually modified for every iteration to change the data and see the answer coming back from the web service. 
+
+I suggest to view it using VLC player.
 
 ---
