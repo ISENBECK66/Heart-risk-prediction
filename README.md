@@ -35,51 +35,48 @@ The script *train.py* it is been used to train the final model. It has been save
 
 1. #### pipenv
 
-   The script *heart_attack_verifier.py* load our model : *model_xgb.bin* and it can run in a separate environment thrugh its dependencies files *Pipenv* e *Pipenv.lock*.
-   *flask* was used for web deployment in *heart_attack_verifier.py* script.
+The script *heart_attack_verifier.py* load our model : *model_xgb.bin* and it can run in a separate environment thrugh its dependencies files *Pipenv* e *Pipenv.lock*.
+*flask* was used for web deployment in *heart_attack_verifier.py* script.
 
-   Install pipenv :
-   ```
-   pip install pipenv
-   ```
-   Get a copy of project and dependencies, or clone the repository :
+- Install pipenv :
+```
+pip install pipenv
+```
+- Get a copy of project and dependencies, or clone the repository :
+```
+git clone [https://github.com/ISENBECK66/Heart-risk-prediction]
+```
+- From the project's folder, run :
+``` 
+pipenv install
+```
+- All the dependencies should be automatically soddisfied, just verify.
+- Run the web service using gunicorn inside the virtual environment:
+```
+pipenv run gunicorn --bind 0.0.0.0:9696 heart_attack_verifier:app
+```
 
-   ```
-   git clone [https://github.com/ISENBECK66/Heart-risk-prediction]
-   ```
-
-   from the project's folder, run :
-
-   ``` 
-   pipenv install
-   ```
-
-   all the dependencies should be soddisfied, run the web service using gunicorn inside the virtual environment:
-
-   ```
-   pipenv run gunicorn --bind 0.0.0.0:9696 heart_attack_verifier:app
-   ```
-
-   In another terminal run the test script :
-   ```
-   python heart_attack_patient_alpha.py
-   ```
-
-   Edit the patient information to generate customized prediction about your healt, changing the parameters in this file :
-   ```
-   vi heart_attack_patient_alpha.py
-   ```
-   
-
-2.There is also the file: *Dockerfile* in the repository, for running the web service in a completely separate container instead.
-
-
-
-
----
+2. #### Docker
+There is also the file: *Dockerfile* in the repository, through this you can run the web service in a completely separate container :
+- Create the docker image :
+```
+docker build -t heart_attack .
+```
+- Run the docker image created:
+```
+docker run -it --rm -p 9696:9696 heart_attack
+```
 
 #### Test the web service :
-The script *heart_attack_patient_alpha.py* send the data of one patient and can be used to test the service.
+
+- To test the web service, in another terminal you can run the test script :
+```
+python heart_attack_patient_alpha.py
+```
+- Edit the patient information to generate customized prediction about your healt, changing the parameters in this file :
+```
+vi heart_attack_patient_alpha.py
+```
 
 ---
 
