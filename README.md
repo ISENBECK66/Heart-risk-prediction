@@ -7,6 +7,10 @@ This is my first ML project and I want to train a model to predic the heart atta
 I find a dataset in kaggle for this purpose :
 
 #### Dataset description: https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset/data
+---
+
+![Screenshot](anatomy-of-heart.webp)
+
 
 ---
 
