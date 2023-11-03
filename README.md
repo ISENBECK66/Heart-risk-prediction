@@ -11,7 +11,6 @@ I find a dataset in kaggle for this purpose :
 
 ![Screenshot](anatomy-of-heart.webp)
 
-
 ---
 
 #### Data :
