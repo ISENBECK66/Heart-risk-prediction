@@ -1,6 +1,5 @@
-![Screenshot](anatomy-of-heart.webp)
 # Machine Learning Zoomcamp 2023 - Midterm project 
-
+![Screenshot](anatomy-of-heart.webp)
 ## GOAL : Predict heart attack 
 
 This is my first ML project and I want to train a model to predic the heart attack probability.
