@@ -44,8 +44,9 @@ The script *train.py* it is been used to train the final model. It has been save
    
    Get a copy of project and dependencies, or clone the repository :
 
-   
-   ``git clone [https://github.com/ISENBECK66/Heart-risk-prediction] ``
+   ```
+   git clone [https://github.com/ISENBECK66/Heart-risk-prediction]
+   ```
 
    from the project's folder, run :
 
