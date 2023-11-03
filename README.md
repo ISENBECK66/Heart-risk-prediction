@@ -21,6 +21,7 @@ The file *notebook.ipynb* contains all the code that I written during data prepa
 EDA, feature importance analysis, model parameter tuning and model selection process.
 
 Unfortunatly, in this phase I discovered that the data in the choosen dataset were poorly correlated.
+
 This condition didn't help our model to reach great performance.
 
 ---
