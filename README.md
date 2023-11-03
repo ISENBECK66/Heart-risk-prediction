@@ -36,15 +36,35 @@ The script *train.py* it is been used to train the final model. It has been save
 1. #### pipenv
 
    The script *heart_attack_verifier.py* load our model : *model_xgb.bin* and it can run in a separate environment thrugh its dependencies files *Pipenv* e *Pipenv.lock*.
+   *flask* was used for web deployment in *heart_attack_verifier.py* script.
 
-   *flask* was used for web deployment *heart_attack_verifier.py* script.
-   Setup pipenv virtual environment, by opening a terminal on your system and run
+   Install pipenv :
+   ```
+   pip install pipenv
+   ```
+   Get a copy of project and dependencies, or clone the repository :
+   ```
+   git clone [https://github.com/ISENBECK66/Heart-risk-prediction]
+   ...
+   from the project's folder, run :
+   ... 
+   pipenv install
+   ...
+   all the dependencies should be soddisfied, run the web service using gunicorn inside the virtual environment:
+   ...
+   pipenv run gunicorn --bind 0.0.0.0:9696 heart_attack_verifier:app
+   ...
 
-```
-pip install pipenv
-```
+   In another terminal run the test script :
+   ...
+   python heart_attack_patient_alpha.py
+   ...
 
-2.The repository contain also the file : *Dockerfile* for running it as a service in a completely separate container.
+   Edit the patient information to generate customized prediction about your healt !
+   (vi heart_attack_patient_alpha.py)
+   
+
+2.There is also the file: *Dockerfile* in the repository, for running the web service in a completely separate container instead.
 
 
 
