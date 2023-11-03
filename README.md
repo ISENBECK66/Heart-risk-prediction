@@ -42,15 +42,20 @@ The script *train.py* it is been used to train the final model. It has been save
    ```
    pip install pipenv
    ```
+
    Get a copy of project and dependencies, or clone the repository :
    ```
    git clone [https://github.com/ISENBECK66/Heart-risk-prediction]
    ...
+
    from the project's folder, run :
+
    ... 
    pipenv install
    ...
+
    all the dependencies should be soddisfied, run the web service using gunicorn inside the virtual environment:
+
    ...
    pipenv run gunicorn --bind 0.0.0.0:9696 heart_attack_verifier:app
    ...
