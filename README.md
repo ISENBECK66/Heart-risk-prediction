@@ -39,14 +39,13 @@ The script *train.py* it is been used to train the final model. It has been save
    *flask* was used for web deployment in *heart_attack_verifier.py* script.
 
    Install pipenv :
-   ```
-   pip install pipenv
-   ```
-
+   
+   ``pip install pipenv``
+   
    Get a copy of project and dependencies, or clone the repository :
-   ```
-   git clone [https://github.com/ISENBECK66/Heart-risk-prediction]
-   ...
+
+   
+   ``git clone [https://github.com/ISENBECK66/Heart-risk-prediction] ``
 
    from the project's folder, run :
 
