@@ -39,3 +39,11 @@ The repository contain also the file : *Dockerfile* for running it as a service 
 
 #### Test the web service :
 The script *heart_attack_patient_alpha.py* send the data of one patient and can be used to test the service.
+
+---
+
+#### Video of the web service running :
+I loaded a small video where you can see the web service running : *web_service_running.webm* 
+The video show the web service starting in Docker and evaluating the data of different patient, sent through the network by the script *heart_attack_patient_alpha.py* living outside the Docker container and manually modified to change the data and see the answer. I suggest to view it using VLC player.
+
+---
