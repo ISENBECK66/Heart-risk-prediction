@@ -2,7 +2,7 @@
 ![Screenshot](anatomy-of-heart.webp)
 ## GOAL : Predict heart attack 
 
-This is my first ML project and I want to train a model to predic the probability of a stroke.
+This is my first ML project and I want to train a model to predic the probability to have an heart attack.
 
 I find a dataset in kaggle for this purpose:
 
