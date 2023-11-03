@@ -35,8 +35,8 @@ The script *train.py* it's been used to train the final model. It was saved in t
 
 1. #### pipenv
 
-The script *heart_attack_verifier.py* load our model : *model_xgb.bin* and it can run in a separate environment thrugh its dependencies files *Pipenv* e *Pipenv.lock*.
-*flask* was used for web deployment in *heart_attack_verifier.py* script.
+The script *heart_attack_verifier.py* load our model : *model_xgb.bin* and it can run in a separate virtual environment across its dependency files *Pipenv* and *Pipenv.lock*.
+*flask* was used for the web deployment in *heart_attack_verifier.py* script.
 
 - Install pipenv :
 ```
@@ -58,7 +58,7 @@ pipenv run gunicorn --bind 0.0.0.0:9696 heart_attack_verifier:app
 
 2. #### Docker
 There is also the file: *Dockerfile* in the repository, through this you can run the web service in a completely separate container :
-- Create the docker image :
+- From the project directory, create the docker image :
 ```
 docker build -t heart_attack .
 ```
@@ -73,7 +73,7 @@ docker run -it --rm -p 9696:9696 heart_attack
 ```
 python heart_attack_patient_alpha.py
 ```
-- Edit the patient information to generate customized prediction about your healt, changing the parameters in this file :
+- Edit the patient information to generate customized prediction about your healt, changing the parameters in the file :
 ```
 vi heart_attack_patient_alpha.py
 ```
@@ -83,10 +83,10 @@ vi heart_attack_patient_alpha.py
 #### Video of the web service running :
 I loaded a small video where you can see how the web service works : *web_service_running.webm* 
 
-The video show the web service starting in Docker, and how it is evaluating data coming from different patients.
+The video show the local web service starting in Docker, and how it works, evaluating different patients with different data.
 
-The data to evaluate are sent through the network by the script *heart_attack_patient_alpha.py* , that is living outside of the Docker container.
-Patient's data into the script are static, and are manually modified for every iteration only to see the heart healt evaluation coming back from the web service. 
+The input data are sent to our app through the network by the script *heart_attack_patient_alpha.py* , that is living outside of the Docker container.
+Patient's data are static into it, and is necessary to manually modify them to have different answer from our local web service. 
 
 I suggest to view it using VLC player.
 
