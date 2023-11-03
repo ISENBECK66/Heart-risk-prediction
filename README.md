@@ -48,7 +48,7 @@ I loaded a small video where you can see how the web service works : *web_servic
 The video show the web service starting in Docker, and how it is evaluating data coming from different patients.
 
 The data to evaluate are sent through the network by the script *heart_attack_patient_alpha.py* , that is living outside of the Docker container.
-Patient's data into the script are static, and are manually modified for every iteration only to see the answer coming back from our web service. 
+Patient's data into the script are static, and are manually modified for every iteration only to see the heart healt evaluation coming back from the web service. 
 
 I suggest to view it using VLC player.
 
