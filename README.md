@@ -44,7 +44,10 @@ pip install pipenv
 ```
 - Get a copy of project and dependencies, or clone the repository :
 ```
-git clone [https://github.com/ISENBECK66/Heart-risk-prediction]
+git clone https://github.com/ISENBECK66/Heart-risk-prediction
+```
+```
+cd Heart-risk-prediction/
 ```
 - From the project's folder, run :
 ``` 
