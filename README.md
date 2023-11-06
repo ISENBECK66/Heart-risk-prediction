@@ -26,14 +26,14 @@ This condition didn't help our model to reach great performance.
 
 ---
 
-#### Save final model :
+#### Save the final model :
 The script *train.py* it's been used to train the final model. It was saved in the file *model_xgb.bin* using *pickle*.
 
 ---
 
-#### Loading final model in web service:
+#### Load the final model in a local web service, and run it using PIPENV or DOCKER:
 
-1. #### pipenv
+1. #### pipenv : run the project in a virtual environment :
 
 The script *heart_attack_verifier.py* load our model : *model_xgb.bin* and it can run in a separate virtual environment across its dependency files *Pipenv* and *Pipenv.lock*.
 *flask* was used for the web deployment in *heart_attack_verifier.py* script.
@@ -42,35 +42,40 @@ The script *heart_attack_verifier.py* load our model : *model_xgb.bin* and it ca
 ```
 pip install pipenv
 ```
-- Get a copy of project and dependencies, or clone the repository :
+- Get a copy of the project and its dependencies, or clone the repository :
 ```
 git clone https://github.com/ISENBECK66/Heart-risk-prediction
 ```
+- Enter the project directory and install the dependencies:
 ```
 cd Heart-risk-prediction/
 ```
-- From the project's folder, run :
 ``` 
 pipenv install
 ```
-- All the dependencies should be automatically soddisfied, just verify.
 - Run the web service using gunicorn inside the virtual environment:
 ```
 pipenv run gunicorn --bind 0.0.0.0:9696 heart_attack_verifier:app
 ```
 
-2. #### Docker
-There is also the file: *Dockerfile* in the repository, through this you can run the web service in a completely separate container :
-- From the project directory, create the docker image :
+2. #### Docker : run the project in a complete and separate virtual machine :
+- Get a copy of the project and its dependencies, or clone the repository :
+```
+git clone https://github.com/ISENBECK66/Heart-risk-prediction
+```
+- Enter the project directory and build the docker environment:
+```
+cd Heart-risk-prediction/
+```
 ```
 docker build -t heart_attack .
 ```
-- Run the docker image created:
+- Run the docker image:
 ```
 docker run -it --rm -p 9696:9696 heart_attack
 ```
 
-#### Test the web service :
+#### Test the local web service :
 
 - To test the web service, in another terminal you can run the test script :
 ```
@@ -84,13 +89,13 @@ vi heart_attack_patient_alpha.py
 ---
 
 #### Video of the web service running :
-I loaded a small video where you can see how the web service works : *web_service_running.webm* 
+In the repository you can find a small video : *web_service_running.webm* , where you can see the local web service at work
 
-The video show the local web service starting in Docker, and how it works, evaluating different patients with different data.
+The video show the local web service starting in Docker, and how it evaluate different patients.
 
-The input data are sent to our app through the network by the script *heart_attack_patient_alpha.py* , that is living outside of the Docker container.
-Patient's data are static into it, and is necessary to manually modify them to have different answer from our local web service. 
+The patient's data are sent to our app through the network by the script *heart_attack_patient_alpha.py* , that is living outside of the Docker container.
+The video show the patient's evaluations for different input data. 
 
-I suggest to view it using VLC player.
+I suggest to use VLC player to view it.
 
 ---
